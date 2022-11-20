@@ -22,7 +22,7 @@ public class Post {
     @NotNull
     @Size(min = 4, max = 100)
     private String title;
-    @Column(length=1000000)
+    @Column(length = 1000000)
     @Lob
     private String body;
     @Temporal(TemporalType.DATE)
@@ -43,7 +43,7 @@ public class Post {
         super();
     }
 
-    public Post(String title, String body){//, Author author) {
+    public Post(String title, String body) {//, Author author) {
         this();
         this.title = title;
         this.body = body;
@@ -90,8 +90,8 @@ public class Post {
     public boolean equals(Object obj) {
         if (!(obj instanceof Post))
             return false;
-        Post otherPost = (Post)obj;
+        Post otherPost = (Post) obj;
         return this.title.equals(otherPost.getTitle()) &&
-               this.body.equals(otherPost.getBody());
+                this.body.equals(otherPost.getBody());
     }
 }
